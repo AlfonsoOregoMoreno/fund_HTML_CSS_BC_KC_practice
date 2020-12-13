@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css" /> 
+    <link rel="stylesheet" href="./css/login.css" /> 
+    <title> - LOGIN - </title>
+</head>
+
+<body>
+
+    <main>
+        <div class="miHeader" >    
+            <img src="./img/fondo-login.jpg" alt="Oops! troubles?">
+        </div>
+
+        <section class="login-section">
+            <article class="login-art">
+                <h1 class="h1">Basketball Concepts & Playbook</h1>
+
+                <!-- Sé que no se debe usar GET para un login. Lo pongo para que por ahora me lleve a la sigte página -->
+                <form action="gallery.html" method="GET" class="miForm">
+                    <div class="title-div">                
+                        <h2 class="h2">Access</h2>
+                    </div>
+
+                    <div class="email-div">                
+                        <label for="email">e-mail:</label>
+                        <input type="email" class="email-i" name="password" placeholder="Your eMAIL here" required />
+                    </div>
+
+                    <div class="passw-div">
+                        <label for="password" >password:</label>             
+                        <input type="password" class="passw-i" name="password" placeholder="Your PASSWORD here" required/>
+                    </div>
+
+                    <p class="button-p">
+                        <input type="submit" class="button-i" value="Login" />
+                    </p>
+                </form>
+            </article>
+        </section>
+    
+        <section class="forgot-section">
+            <article class="forgot-password" >    
+                <!-- LINK Desactivado por ahora -->
+                forgot password
+            </article>    
+        </section>
+    
+    </main>
+    
+</body>
+</html>

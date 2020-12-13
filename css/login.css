@@ -1,0 +1,144 @@
+:root {
+    --navbar-height: 2rem;
+}
+
+a,
+a:link,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: red;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  animation-duration: 6s; 
+  animation-name: inicio;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(238, 183, 82);
+}
+
+.miHeader {
+  border: 1px solid black; 
+  overflow: hidden; 
+  max-height: 4rem;
+}
+  
+h1{
+  color: black;
+  font-size: 1.1rem; 
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8),
+    -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+    -1px -1px 1px rgba(255, 255, 255, 0.8);    
+    margin-bottom: 5rem; 
+}
+
+h2{
+  margin: 0.5rem 0 0 0; 
+}
+
+.title-div{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1rem; 
+  padding: 0; 
+}
+
+.miForm {
+  border: 1px solid black; 
+  border-radius: 15px;
+  min-width: 300px;
+  margin-bottom: 1rem; 
+  width: 100%; 
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.email-div, 
+.passw-div{
+  padding: 0 5px; 
+  margin: 0.2rem; 
+  margin-top: 0px; 
+  border-radius: 8px;
+} 
+
+input[type='submit'] {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  min-width: 8rem;
+  border-radius: 4px;
+  border: none;
+  background: rgb(247, 73, 4);
+  opacity: 0.7; 
+}
+
+.button-p{
+  display: flex; 
+  justify-content: center;
+  margin: 1.5rem auto ; 
+}
+
+label{
+  display: block; 
+}
+
+/*Solo para usar BEFORE y practicar*/
+label::before{
+  content: " ·";
+  color: red; 
+  font-size: 2rem;
+}
+
+.login-section, 
+.login-art{
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8),
+    -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+    -1px -1px 1px rgba(255, 255, 255, 0.8);    
+}
+
+.forgot-section{
+  color: red; 
+  margin-top: 2rem; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .miForm{
+    width: 80%; 
+    max-width: 30rem;
+  }
+
+  .miHeader {
+    max-height: 6rem;
+  }
+
+  .h1{
+    font-size: 2.5rem; 
+  }
+}
+
+@keyframes inicio{
+  from{
+    opacity: 0; 
+  }
+  to{
+    opacity: 1; 
+  }
+}

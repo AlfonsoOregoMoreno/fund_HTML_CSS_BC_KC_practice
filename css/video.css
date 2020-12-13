@@ -1,0 +1,283 @@
+/* =================
+=== MOBILE FIRST ===
+====================
+(media query for Desktop is at the end)
+*/
+
+:root {
+    --navbar-height: 2rem;
+    
+    /*Para practicar VARIABLES, aprovechando color repetido: */
+    --color-base-rojizo: orangered; 
+    --img-de-card-h: 170px;
+    --img-de-card-w: 170px;
+}
+  
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgba(243, 223, 204, 0.884);
+}
+
+
+/*========
+Del NAVBAR
+========*/
+.navbar{
+    position: fixed;
+    top: 0; 
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-list{
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: var(--navbar-height);
+}
+
+#menu:checked ~ .navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    background-color: black;
+    width: 80vw;
+    height: calc(0.5 * (100vh - var(--navbar-height)));
+    opacity: 0.99;
+    padding: 2rem 5rem;
+}
+
+#menu:checked ~ .button-p {
+    display: none;
+}
+
+.button-p{
+    display: flex; 
+    justify-content: right;
+    padding: 4px 1rem; 
+}
+
+#search-box{
+    width: 10rem; 
+}
+
+.search-but{
+    background-color: var(--color-base-rojizo);
+}
+
+main{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main > h1{
+    padding: 1rem; 
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8), 
+        -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+        -1px -1px 1px rgba(255, 255, 255, 0.8);    
+    color: var(--color-base-rojizo);
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    border: 1px solid black; 
+    margin: 2rem 0 0 0;
+    font-size: 2rem; 
+    border-radius: 8px;    
+}
+
+.miHeader{
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    background-color: orange;
+    height: 2rem;
+    margin: 2rem 0 0 0;
+}
+
+.miHeader h1{
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8),
+        -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+        -1px -1px 1px rgba(255, 255, 255, 0.8);    
+    font-size: 1.1rem; 
+}
+
+section{
+    padding: 0.5rem;
+    display: block
+}
+
+.video-div{
+    max-width: 90vw;
+}
+
+.details-sec{
+    padding: 5px; 
+}
+
+.encabezado{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.encabezado-stats{
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8),
+        -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+        -1px -1px 1px rgba(255, 255, 255, 0.8);  
+    color: var(--color-base-rojizo);
+}
+
+ul{
+    margin-top: 4px; 
+}
+
+thead > tr > th{
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+tbody > tr > th{
+    text-align: right;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.statistics-sec{
+    margin-top: 3rem;
+    border: 1px solid black; 
+}
+
+.others-sec{
+    width: 90vw;
+    margin-top: 3rem; 
+    margin-bottom: 3rem; 
+    border-top: 1px solid black;
+}
+
+.others-h2{
+    font-size: 1.5rem; 
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8), 
+        -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+        -1px -1px 1px rgba(255, 255, 255, 0.8);    
+    color: var(--color-base-rojizo);
+}
+
+.others-card {
+    display: flex; 
+    justify-content: center;
+    margin: 0 0 1rem 0 ; 
+}
+
+.others-card-a{
+    border: 1px solid black; 
+    margin-right: 0.5rem;
+}
+
+.others-card-img{
+    height: var(--img-de-card-h);
+    width: var(--img-de-card-w);
+}
+
+.p-de-card{
+    font-size: 1rem;
+    margin-top: 0.5rem; 
+    padding: 2px; 
+    border: 1px solid var(--color-base-rojizo); 
+    border-radius: 4px; 
+    transform: rotate(3deg);
+    max-width: var(--img-de-card-w);
+    max-height: 7rem;
+    overflow-y: hidden;
+}
+
+
+
+
+
+/*****************/
+/* == DESKTOP == */
+@media (min-width: 900px) {
+    .navbar{
+        position: fixed;
+        top: 0; 
+        opacity: 0.8;
+    }
+    
+    .navbar-list{
+        display: block;
+    }
+
+    .logo, 
+    .menu-label {
+        display: none;
+    }
+
+    #search-box{
+        width: 15rem; 
+    }
+    
+    .miHeader{
+        height: 3rem;
+        margin-top: 2rem; 
+    }
+
+    .miHeader h1{
+        font-size: 2.8em; 
+    }
+    
+    video {
+        width: 50vw; 
+    }
+
+    .video-div{
+        max-width: 60vw;
+    }
+
+    .details-sec, 
+    .encabezado, 
+    .statistics-art, 
+    .encabezado-stats{
+        font-size: 2rem;
+    }
+        
+    .others-grid{
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }    
+    
+}
+/*****************/
+  

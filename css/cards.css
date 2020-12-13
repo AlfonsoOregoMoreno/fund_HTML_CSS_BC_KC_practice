@@ -1,0 +1,49 @@
+/* ==========
+=== CARDs ===
+=============
+*/
+:root {
+    --img-de-card-h: 170px;
+    --img-de-card-w: 170px;
+}
+
+.p-de-card{
+    font-size: 1rem;
+    margin: 0.5rem 0rem; 
+    padding: 2px; 
+    border: 1px solid black; 
+    border-radius: 4px; 
+    transform: rotate(3deg);
+    min-width: var(--img-de-card-w); 
+    max-height: 7rem;
+    overflow-y: hidden;
+}
+
+.on-img-text{
+    position: absolute;
+    text-align: center;
+    padding-top: 1rem;
+
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8), 
+        -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+        -1px -1px 1px rgba(255, 255, 255, 0.8);    
+    
+    width: var(--img-de-card-w);
+    height: var(--img-de-card-h);
+    max-width: var(--img-de-card-w);
+    max-height: var(--img-de-card-h);
+    opacity: 0%;
+    overflow: hidden;
+}
+
+
+/*****************/
+/* == DESKTOP == */
+@media (min-width: 768px) {  
+    .on-img-text:hover{
+        opacity: 1;
+    }    
+}
+/*****************/
+  
+  

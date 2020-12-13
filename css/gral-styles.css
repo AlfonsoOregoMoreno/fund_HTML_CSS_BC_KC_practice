@@ -1,0 +1,346 @@
+:root {
+    /*Para practicar VARIABLES, aprovechando color repetido: */
+    --color-base-rojizo: orangered; 
+    --navbar-height: 2rem;
+}
+
+a,
+a:link,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes inicio{
+  from{
+    opacity: 0; 
+  }
+  to{
+    opacity: 1; 
+  }
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  animation-duration: 6s; 
+  animation-name: inicio;
+}
+
+.miMain{
+  padding: 0rem; 
+}
+
+
+
+
+
+/*========
+Del NAVBAR
+========*/
+.navbar{
+  position: fixed;
+  top: 0; 
+  opacity: 0.8;
+}
+
+#menu {
+  display: none;
+}
+
+#menu:checked ~ .navbar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  width: 80vw;
+
+  height: calc(0.5 * (100vh - var(--navbar-height)));
+  opacity: 0.99;
+  padding: 2rem 5rem;
+}
+
+#menu:checked ~ .button-p {
+    display: none;
+}
+
+.menu-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: var(--navbar-height);
+}
+
+.button-p{
+  display: flex; 
+  justify-content: right;
+  padding: 4px 1rem; 
+}
+
+#search-box{
+  width: 10rem; 
+}
+
+.search-but{
+    background-color: orangered;
+}
+
+
+
+/*========
+Del Header
+========*/
+.miHeader{
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+  width: 100%; 
+  background-color: orange;
+  height: 2rem;
+  margin: 2rem 0 0 0;
+}
+
+.miHeader h1{
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8),
+      -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+      -1px -1px 1px rgba(255, 255, 255, 0.8);    
+  font-size: 1.4rem; 
+}
+
+
+main{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main > h1{
+  padding: 1rem; 
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8), 
+      -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+      -1px -1px 1px rgba(255, 255, 255, 0.8);    
+  color: var(--color-base-rojizo);
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+  border: 1px solid black; 
+  margin: 2rem 0 0 0;
+  font-size: 2rem; 
+  border-radius: 8px;    
+}
+
+
+
+
+/*======================================
+De las SECCIONES principales, en general
+======================================*/
+.ataque{ 
+  background-color: rgba(158, 238, 158, 0.5);
+  /*width: 90%;*/
+  padding-top: 0.5rem; 
+  padding: 0.5rem; 
+}
+
+.defensa {
+  background-color: rgba(250, 9, 9, 0.219);
+  /*width: 90%;*/
+  padding-top: 0.5rem; 
+  padding: 0.5rem; 
+  border-top: 1px solid black;
+}
+
+.favs {
+  background-color: rgba(225, 241, 154, 0.5);
+  /*width: 90%; */
+  padding-top: 0.5rem; 
+  padding: 0.5rem; 
+  border-top: 1px solid black; 
+} 
+
+.h1-ata, 
+.h1-def, 
+.h1-fav  {
+  padding-left: 1rem; 
+  font-size: 1.5rem; 
+  border-right: 2px solid black; 
+  border-bottom: 2px solid black; 
+  border-radius: 5px;
+}
+
+.h1-patroc{
+  text-align: center;
+  color: var(--color-base-rojizo);
+  border: 1px solid var(--color-base-rojizo); 
+  border-radius: 5px;
+  box-shadow: 1rem;
+}
+
+section h1{
+  margin: 1rem; 
+}
+
+
+/*=============*/
+/* De las CARDs*/
+/*=============*/
+.card {
+  display: flex; 
+  justify-content: center;
+  margin: 0.5rem 0.5rem 0.5rem 1rem; 
+}
+
+.tag{
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.div-de-img-de-card{
+  height: var(--img-de-card-h); 
+  width: var(--img-de-card-w); 
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+  object-fit: fill;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.div-texto-y-fav{
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a-de-card{
+  border: 1px solid black; 
+  margin-right: 0.5rem;
+}
+
+.p-de-card{
+  font-size: 1rem;
+  margin-top: 0.5rem; 
+  padding: 2px; 
+  border: 1px solid white; 
+  border-radius: 4px; 
+  transform: rotate(3deg);
+  max-width: var(--img-de-card-w); 
+  max-height: 7rem;
+  overflow-y: hidden;
+}
+
+.patroc-side {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem; 
+}
+
+
+
+
+
+/*===================*/
+/*OJO!!! Revisar esto*/
+/*===================*/
+/* .miGrid{
+  display: flex;
+  flex-direction: column;
+} */
+
+
+
+
+
+/*****************/
+/* == DESKTOP == */
+@media (min-width: 900px) {  
+  .navbar{
+    position: fixed;
+    top: 0; 
+    opacity: 0.8;
+  }
+
+  .navbar-list{
+      display: block;
+  }
+
+  .logo, 
+  .menu-label {
+      display: none;
+  }
+
+  #search-box{
+    width: 15rem; 
+  }
+
+  .miHeader{
+    height: 3rem;
+    margin-top: 2rem; 
+  }
+
+  .miHeader h1{
+      font-size: 2.8em; 
+  }
+
+  .miMain{
+    padding: 1rem; 
+    display: grid; 
+    max-width: 98%;   
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    grid-template-areas:
+      ' att att side'
+      ' def def side'
+      ' fav fav NADA'; 
+  }
+
+  #ataque{
+    border-radius: 10px;
+    grid-area: att;
+  }
+
+  #defensa{
+    border-radius: 10px;
+    grid-area: def;
+  }
+  
+  #favs{
+    border-radius: 10px;
+    grid-area: fav;
+  }
+  
+  #patroc-sec{
+    border: 5px solid white;
+    border-radius: 10px;
+    grid-area: side;
+  }
+    
+  .miniaturas-div{
+    border: 5px solid white;
+  }
+
+  div[class$="-parrilla"]{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    max-width: 100%; 
+    padding: 8px; 
+  }
+
+}
+/*****************/

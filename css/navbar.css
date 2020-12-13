@@ -1,0 +1,185 @@
+/* =================
+=== MOBILE FIRST ===
+====================
+(media query for Desktop is at the end)
+*/
+
+:root {
+  --navbar-height: 2rem;
+  
+  /*Para practicar VARIABLES, aprovechando color repetido: */
+  --color-base-rojizo: orangered; 
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:focus {
+text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: rgba(243, 223, 204, 0.884);
+}
+
+.logo {
+    color: white;
+    float: left;
+    margin: 0rem 1rem;
+    padding: 0 1rem;
+    border-radius: 5px;
+    line-height: var(--navbar-height);
+    border: 1px solid black;
+}
+
+.navbar {
+  background-color: orange;
+  position: fixed;
+  width: 100%;
+  height: var(--navbar-height);
+  top: 0; 
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.navbar-list {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding-right: 1rem;
+  padding: 0;
+  background: orange;
+  display: none;
+}
+
+.navbar-item {
+  display: inline;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.navbar-item > a {
+  display: inline-block;
+  color: white;
+  line-height: var(--navbar-height);
+  padding: 0 1rem;
+}
+
+.navbar-item > a:hover {
+  background-color: var(--color-base-rojizo);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: var(--navbar-height);
+}
+
+#menu:checked ~ .navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    background-color: black;
+    width: 80vw;
+
+    height: calc(0.5 * (100vh - var(--navbar-height)));
+    opacity: 0.99;
+    padding: 2rem 5rem;
+}
+
+#menu:checked ~ .button-p {
+    display: none;
+}
+
+#search-box{
+  width: 10rem; 
+}
+
+.search-but{
+    background-color: var(--color-base-rojizo);
+}
+
+.button-p{
+  display: flex; 
+  justify-content: right;
+  padding: 4px 1rem; 
+}
+
+.miHeader{
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+  background-color: orange;
+  height: 2rem;
+  margin: 2rem 0 0 0;
+}
+
+.miHeader h1{
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8),
+      -1px 1px 1px rgba(255, 255, 255, 0.8), 1px -1px 1px rgba(255, 255, 255, 0.8),
+      -1px -1px 1px rgba(255, 255, 255, 0.8);    
+  font-size: 1.1rem; 
+}
+
+
+
+
+
+
+
+/*****************/
+/* == DESKTOP == */
+@media (min-width: 900px) {
+  .navbar{
+      position: fixed;
+      top: 0; 
+      opacity: 0.8;
+  }
+  
+  .navbar-list{
+      display: block;
+  }
+
+  .logo, 
+  .menu-label {
+      display: none;
+  }
+
+  #search-box{
+      width: 15rem; 
+  }
+  
+  .miHeader{
+      height: 3rem;
+      margin-top: 2rem; 
+  }
+
+  .miHeader h1{
+      font-size: 2.8em; 
+  }
+    
+
+}
+/*****************/
+
+
+
+
+
